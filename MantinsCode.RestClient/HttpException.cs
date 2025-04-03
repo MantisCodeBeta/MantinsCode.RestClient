@@ -1,4 +1,4 @@
-﻿namespace MantinsCode.RestClient
+﻿namespace MantisCode.RestClient
 {
     public class HttpException(string title, Exception innerException, string? endpoint)
         : Exception($"HTTP_ERROR_{title}", innerException)

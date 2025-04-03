@@ -1,7 +1,7 @@
 ﻿using RestEase;
 using RestEase.Implementation;
 
-namespace MantinsCode.RestClient
+namespace MantisCode.RestClient
 {
     public class LoggingRequester(HttpClient httpClient) : Requester(httpClient)
     {

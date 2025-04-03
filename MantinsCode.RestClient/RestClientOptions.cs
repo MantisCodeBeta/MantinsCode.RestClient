@@ -1,18 +1,18 @@
 ﻿using Microsoft.Extensions.Configuration;
 
-namespace MantinsCode.RestClient
+namespace MantisCode.RestClient
 {
     public class RestClientOptions
     {
         public string Address { get; set; } = null!;
         public Dictionary<string, string>? Headers { get; set; }
         public int? GlobalTimeoutInSeconds { get; set; }
-        public int? TryTimeoutIsSeconds { get; set; }
+        public int? TryTimeoutInSeconds { get; set; }
         public bool EnableRetries { get; set; }
         public int[]? RetriesInMilliseconds { get; set; }
         public int? RateLimit { get; set; }
         public int? RateLimitWindowInSeconds { get; set; }
-        public bool EnableReateLimiting => RateLimit.HasValue && RateLimitWindowInSeconds.HasValue;
+        public bool EnableRateLimiting => RateLimit.HasValue && RateLimitWindowInSeconds.HasValue;
 
         internal class RestClientOptionsBuilder
         {
@@ -39,7 +39,7 @@ namespace MantinsCode.RestClient
                 throw new Exception($"invalid {Address}");
             }
 
-            if (EnableRetries && GlobalTimeoutInSeconds < (TryTimeoutIsSeconds * (RetriesInMilliseconds!.Length + 1) + RetriesInMilliseconds.Sum() / 1000d))
+            if (EnableRetries && GlobalTimeoutInSeconds < (TryTimeoutInSeconds * (RetriesInMilliseconds!.Length + 1) + RetriesInMilliseconds.Sum() / 1000d))
             {
                 throw new Exception($"{nameof(GlobalTimeoutInSeconds)} should exceed total retry durations");
             }
@@ -55,7 +55,7 @@ namespace MantinsCode.RestClient
             if (RetriesInMilliseconds is null ||
                 RetriesInMilliseconds.Length == 0) RetriesInMilliseconds = [500];
 
-            TryTimeoutIsSeconds ??= 30;
+            TryTimeoutInSeconds ??= 30;
             GlobalTimeoutInSeconds ??= 100;
         }
     }

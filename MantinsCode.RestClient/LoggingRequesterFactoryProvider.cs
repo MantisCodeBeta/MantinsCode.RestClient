@@ -1,7 +1,7 @@
 ﻿using Microsoft.Extensions.Configuration;
 using RestEase;
 
-namespace MantinsCode.RestClient
+namespace MantisCode.RestClient
 {
     public static class LoggingRequesterFactoryProvider
     {

@@ -1,7 +1,7 @@
 ﻿using Polly.RateLimit;
 using System.Threading.RateLimiting;
 
-namespace MantinsCode.RestClient
+namespace MantisCode.RestClient
 {
     public class RateLimitHandler(RestClientOptions restClientOptions) : DelegatingHandler, IAsyncDisposable
     {

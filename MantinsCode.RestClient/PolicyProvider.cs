@@ -4,7 +4,7 @@ using Polly.RateLimit;
 using Polly.Timeout;
 using Serilog;
 
-namespace MantinsCode.RestClient
+namespace MantisCode.RestClient
 {
     public static class PolicyProvider
     {

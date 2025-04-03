@@ -1,4 +1,4 @@
-﻿namespace MantinsCode.RestClient
+﻿namespace MantisCode.RestClient
 {
     [AttributeUsage(AttributeTargets.Interface)]
     public class ApiClientAttribute : Attribute

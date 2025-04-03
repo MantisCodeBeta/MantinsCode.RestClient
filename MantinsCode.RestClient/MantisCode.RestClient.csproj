@@ -6,6 +6,10 @@
     <Nullable>enable</Nullable>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Title>MantisCode.RestClient</Title>
+    <Company>MantisCode</Company>
+    <Authors>Lazarus</Authors>
+    <Product>BackInfrastucture</Product>
+    <PackageProjectUrl>https://github.com/MantisCodeBeta</PackageProjectUrl>
   </PropertyGroup>
 
   <ItemGroup>

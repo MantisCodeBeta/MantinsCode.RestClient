@@ -1,4 +1,4 @@
-﻿namespace MantinsCode.RestClient
+﻿namespace MantisCode.RestClient
 {
     public class HttpExceptionHandler : DelegatingHandler
     {

@@ -3,7 +3,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using RestEase.HttpClientFactory;
 
-namespace MantinsCode.RestClient
+namespace MantisCode.RestClient
 {
     public static class Extensions
     {
@@ -28,7 +28,7 @@ namespace MantinsCode.RestClient
                 .AddHttpMessageHandler<HttpExceptionHandler>()
                 .AddPolicyHandler(request => PolicyProvider.GetBasePolicy(restClientOptions, request));
 
-            if (restClientOptions.EnableReateLimiting)
+            if (restClientOptions.EnableRateLimiting)
                 builder.AddHttpMessageHandler(() => new RateLimitHandler(restClientOptions)).SetHandlerLifetime(Timeout.InfiniteTimeSpan);
 
             return builder;
