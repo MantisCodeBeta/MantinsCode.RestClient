@@ -9,7 +9,9 @@
     <Company>MantisCode</Company>
     <Authors>Lazarus</Authors>
     <Product>BackInfrastucture</Product>
-    <PackageProjectUrl>https://github.com/MantisCodeBeta</PackageProjectUrl>
+	<Version>1.0.1</Version>
+    <PackageProjectUrl>https://github.com/MantisCodeBeta.RestClient</PackageProjectUrl>
+	<PackageId>MantisCode.RestClient</PackageId>
   </PropertyGroup>
 
   <ItemGroup>
